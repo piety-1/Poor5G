@@ -80,8 +80,7 @@ sudo ./Poor5G.bin
 
 ## 📡 Follow Me
 
-- GitHub: [KevinKhemra007](https://github.com/KevinKhemra007)
-- Telegram Channel: https://t.me/hackisreal007
+- GitHub: [KevinRaa](https://github.com/KevinRaa)
 - TikTok: @RaaTechOfficial
 
 ---
