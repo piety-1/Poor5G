@@ -44,10 +44,12 @@ sudo apt install aircrack-ng tshark -y
 ## ⚙️ How to Run
 
 ```bash
+
+git clone https://github.com/KevinnRaa/Poor5G.git
+cd Poor5G
 chmod +x Poor5G.bin
 sudo ./Poor5G.bin
 ```
-
 > Always use with `sudo` to enable monitor mode and packet injection.
 
 ---
