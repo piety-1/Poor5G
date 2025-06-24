@@ -72,6 +72,14 @@ sudo ./Poor5G.bin
 0. ❌ Exit
 ```
 
+#scan 5GHz
+
+![1](https://github.com/user-attachments/assets/c6bf67ac-9abc-4fbe-b654-d6b2da9f3f94)
+
+#Attack 5GHz
+
+![2](https://github.com/user-attachments/assets/026b38b8-a133-425e-b294-9967bd04d47a)
+
 ---
 
 ## ⚠️ Disclaimer
