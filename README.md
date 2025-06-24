@@ -1,13 +1,11 @@
 # Poor5G - WiFi Attack Tool v2.5
-# Developed by Kevin & Khemra
 
-# This document now contains the raw README content without 'echo' commands, in English.
-
-👻 Poor5G - WiFi Attack Tool v2.5
 
 **Developed by Kevin & Khemra**
 
 Poor5G is a powerful and stylish terminal-based tool for WiFi network testing and deauthentication attacks.
+---
+![image](https://github.com/user-attachments/assets/85753d1d-10c2-4486-a536-d8838baf1360)
 
 ---
 
